@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://bve3y8uo1gvai"]
 
 [ext_resource type="Texture2D" uid="uid://d37hhu7td2n42" path="res://textures/newmenu.png" id="1_06t4h"]
@@ -60,6 +61,9 @@ _data = {
 &"titleAnim": SubResource("Animation_8qtwp"),
 &"updown": SubResource("Animation_nlkkf")
 }
+=======
+[gd_scene load_steps=0 format=3 uid="uid://bve3y8uo1gvai"]
+>>>>>>> ae5745e5d428cbbb868df23e3a73878d3947b09f
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
