@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="frantic-game-jam"
-<<<<<<< HEAD
+
 run/main_scene="uid://bve3y8uo1gvai"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
@@ -20,10 +20,10 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-=======
-run/main_scene="uid://c744eeqfcl3ux"
-config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+
+
+
+
 
 [input]
 
@@ -51,4 +51,4 @@ player.right={
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
->>>>>>> ae5745e5d428cbbb868df23e3a73878d3947b09f
+
