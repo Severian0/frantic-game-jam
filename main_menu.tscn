@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=11 format=3 uid="uid://bve3y8uo1gvai"]
+[gd_scene load_steps=26 format=3 uid="uid://bve3y8uo1gvai"]
 
 [ext_resource type="Texture2D" uid="uid://d37hhu7td2n42" path="res://textures/newmenu.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://df5b6rdtq0j0j" path="res://main_menu.gd" id="1_nlkkf"]
@@ -7,35 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://b0mjiv3ywam5t" path="res://textures/alexdixon.png" id="3_glbon"]
 [ext_resource type="Script" uid="uid://cue82w0ul02wl" path="res://sprite_2d.gd" id="4_nlkkf"]
 [ext_resource type="Script" uid="uid://c7aeeml35t2hd" path="res://animation_player.gd" id="5_glbon"]
-
-[sub_resource type="Animation" id="Animation_nlkkf"]
-resource_name = "updown"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WarwickLogo:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1590, 881), Vector2(1590, 700), Vector2(1590, 881)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
+[ext_resource type="Texture2D" uid="uid://b6drc3aopqxst" path="res://textures/jamesarchibzzle.jpg" id="7_ojb7r"]
+[ext_resource type="Texture2D" uid="uid://bwl0j4xvbwl07" path="res://textures/frame_00_delay-0.1s.png" id="8_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://37isdso7sce5" path="res://textures/frame_01_delay-0.1s.png" id="9_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://dwr13e2reojt7" path="res://textures/frame_02_delay-0.1s.png" id="10_saq78"]
+[ext_resource type="Texture2D" uid="uid://deq3fmmndrvvm" path="res://textures/frame_03_delay-0.1s.png" id="11_8uw0o"]
+[ext_resource type="Texture2D" uid="uid://b1ms77rs5jyjy" path="res://textures/frame_04_delay-0.1s.png" id="12_ql5ya"]
+[ext_resource type="Texture2D" uid="uid://bolcklgxm2yrn" path="res://textures/frame_05_delay-0.1s.png" id="13_ka3nr"]
+[ext_resource type="Texture2D" uid="uid://d1k7eyguamh5y" path="res://textures/frame_06_delay-0.1s.png" id="14_48knj"]
+[ext_resource type="Texture2D" uid="uid://jw1floc5bebx" path="res://textures/frame_07_delay-0.1s.png" id="15_m2y5l"]
+[ext_resource type="Texture2D" uid="uid://blmxl1sd0j7o5" path="res://textures/frame_08_delay-0.1s.png" id="16_imjy1"]
+[ext_resource type="Texture2D" uid="uid://8nwlypdd6ooe" path="res://textures/frame_09_delay-0.1s.png" id="17_u5051"]
+[ext_resource type="Texture2D" uid="uid://blaottrsf2oc5" path="res://textures/frame_10_delay-0.1s.png" id="18_v2sba"]
+[ext_resource type="Texture2D" uid="uid://ddbncsd8vwd6d" path="res://textures/frame_11_delay-0.1s.png" id="19_ai24q"]
+[ext_resource type="Texture2D" uid="uid://cbuia5a0se8qv" path="res://textures/frame_12_delay-0.1s.png" id="20_qby1g"]
 
 [sub_resource type="Animation" id="Animation_qe12f"]
 length = 0.001
@@ -55,15 +39,76 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_8qtwp"]
 resource_name = "titleAnim"
 
+[sub_resource type="Animation" id="Animation_nlkkf"]
+resource_name = "updown"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarwickLogo:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1590, 881), Vector2(1590, 700), Vector2(1590, 881)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8qtwp"]
 _data = {
 &"RESET": SubResource("Animation_qe12f"),
 &"titleAnim": SubResource("Animation_8qtwp"),
 &"updown": SubResource("Animation_nlkkf")
 }
-=======
-[gd_scene load_steps=0 format=3 uid="uid://bve3y8uo1gvai"]
->>>>>>> ae5745e5d428cbbb868df23e3a73878d3947b09f
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04soa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_e5qqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7bbuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_saq78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8uw0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ql5ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ka3nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_48knj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m2y5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_imjy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_u5051")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v2sba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ai24q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qby1g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
@@ -168,6 +213,23 @@ scale = Vector2(1.45, 1.45)
 text = "FRANTIC LABS"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="JamesArchBizzle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-74.55556, 434.85678)
+rotation = 0.2617994
+scale = Vector2(2.4930954, 2.4913614)
+texture = ExtResource("7_ojb7r")
+offset = Vector2(99.96265, -100.0258)
+script = ExtResource("4_nlkkf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JamesArchBizzle"]
+position = Vector2(94.99302, -116.00061)
+scale = Vector2(0.1103258, 0.19435154)
+sprite_frames = SubResource("SpriteFrames_04soa")
+autoplay = "default"
+frame = 8
+frame_progress = 0.27324548
 
 [connection signal="pressed" from="Control/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Options" to="." method="_on_options_pressed"]

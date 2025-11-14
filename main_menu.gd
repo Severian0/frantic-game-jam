@@ -2,8 +2,8 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	$Control/VBoxContainer/Start.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,4 +24,6 @@ func _on_quit_pressed() -> void:
 
 
 func _on_easter_egg_pressed() -> void:
-	print("grrrrr")
+	$AlexDixonMenu.visible = false
+	$JamesArchBizzle.visible = true
+	
