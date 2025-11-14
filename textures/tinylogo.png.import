@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j3u6wtwyfywe"
-path="res://.godot/imported/UniLogo.png-2e936d35b7c401f570bf643da9073f6c.ctex"
+uid="uid://da3w6o75wxaub"
+path="res://.godot/imported/tinylogo.png-cc54b958e5d7444ea666546997b6a028.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/UniLogo.png"
-dest_files=["res://.godot/imported/UniLogo.png-2e936d35b7c401f570bf643da9073f6c.ctex"]
+source_file="res://textures/tinylogo.png"
+dest_files=["res://.godot/imported/tinylogo.png-cc54b958e5d7444ea666546997b6a028.ctex"]
 
 [params]
 
