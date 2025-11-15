@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2smb17fd1pkx"]
+
+[ext_resource type="Script" uid="uid://chkbxkokua6ln" path="res://scripts/rubbish.gd" id="1_tf6vc"]
+[ext_resource type="Texture2D" uid="uid://dpxny6r4qgb8i" path="res://textures/rubbish1.png" id="2_k26ct"]
+[ext_resource type="Texture2D" uid="uid://cxdqnr7xwb21l" path="res://textures/rubbish2.png" id="3_lxot4"]
+[ext_resource type="Texture2D" uid="uid://be0pfpokgxbmg" path="res://textures/rubbish3.png" id="4_w2dri"]
+[ext_resource type="Texture2D" uid="uid://dp8i7w3j828x" path="res://textures/rubbish4.png" id="5_6wcsi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uy8lj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k26ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lxot4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w2dri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6wcsi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tf6vc"]
+radius = 8.062258
+
+[node name="Rubbish" type="RigidBody2D"]
+z_index = 200
+y_sort_enabled = true
+texture_filter = 1
+collision_layer = 2
+collision_mask = 0
+mass = 0.005
+gravity_scale = 0.0
+script = ExtResource("1_tf6vc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_uy8lj")
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tf6vc")

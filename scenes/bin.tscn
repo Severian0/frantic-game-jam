@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwemhdaatobjp"]
+
+[ext_resource type="Texture2D" uid="uid://b5iac57e85uoh" path="res://textures/bin.png" id="1_yq3hu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yq3hu"]
+radius = 17.029387
+
+[node name="Bin" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 200
+y_sort_enabled = true
+texture_filter = 1
+texture = ExtResource("1_yq3hu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yq3hu")

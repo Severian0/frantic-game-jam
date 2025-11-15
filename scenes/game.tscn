@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c744eeqfcl3ux"]
+[gd_scene load_steps=11 format=4 uid="uid://c744eeqfcl3ux"]
 
 [ext_resource type="Script" uid="uid://8p7yek7xo8jv" path="res://scripts/player.gd" id="1_yqjtg"]
 [ext_resource type="SpriteFrames" uid="uid://be4cgmqrnyavs" path="res://resources/player/player_frames.tres" id="2_lbhrr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://bfyjkevfir51a" path="res://resources/theme.tres" id="5_iywne"]
 [ext_resource type="Script" uid="uid://dmi4ih12auq1q" path="res://scripts/game_manager.gd" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://djscm2foup5jb" path="res://scripts/gui.gd" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cwemhdaatobjp" path="res://scenes/bin.tscn" id="7_gee14"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_80nbo"]
 
@@ -310,6 +311,9 @@ move_direction = -1
 position = Vector2(384, 244)
 game_manager = NodePath("../../GameManager")
 move_direction = -1
+
+[node name="Bin" parent="." instance=ExtResource("7_gee14")]
+position = Vector2(209, 432)
 
 [node name="Walls" type="TileMapLayer" parent="."]
 self_modulate = Color(0.9, 0.9, 0.9, 1)
