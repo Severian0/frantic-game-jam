@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://di6h47tulefiw"]
+
+[ext_resource type="Script" uid="uid://cd8euhrnbij7o" path="res://scripts/student.gd" id="1_4orpo"]
+[ext_resource type="SpriteFrames" uid="uid://be4cgmqrnyavs" path="res://resources/player/player_frames.tres" id="1_y87o8"]
+
+[node name="Student" type="CharacterBody2D"]
+z_index = 200
+y_sort_enabled = true
+texture_filter = 1
+script = ExtResource("1_4orpo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_y87o8")
+animation = &"idle"
