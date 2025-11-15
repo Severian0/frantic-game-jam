@@ -158,13 +158,13 @@ position = Vector2(1590, 881)
 scale = Vector2(0.24012886, 0.2500001)
 texture = ExtResource("2_jix8l")
 
-[node name="Control" type="Control" parent="."]
+[node name="MainMenu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
 layout_mode = 0
 offset_left = 908.0
 offset_top = 471.0
@@ -173,23 +173,43 @@ offset_bottom = 695.0
 scale = Vector2(1.075, 1.075)
 alignment = 1
 
-[node name="Start" type="Button" parent="Control/VBoxContainer"]
+[node name="Start" type="Button" parent="MainMenu/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Options")
 text = "Start"
 
-[node name="Options" type="Button" parent="Control/VBoxContainer"]
+[node name="Options" type="Button" parent="MainMenu/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Quit")
 text = "Options"
 
-[node name="Quit" type="Button" parent="Control/VBoxContainer"]
+[node name="Quit" type="Button" parent="MainMenu/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Start")
 text = "Quit"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionsContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 471.0
+offset_right = 1058.0
+offset_bottom = 695.0
+scale = Vector2(1.075, 1.075)
+alignment = 1
+
+[node name="Back" type="Button" parent="Options/OptionsContainer"]
+layout_mode = 2
+text = "Back to menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -231,7 +251,8 @@ autoplay = "default"
 frame = 8
 frame_progress = 0.27324548
 
-[connection signal="pressed" from="Control/VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/OptionsContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="EasterEgg" to="." method="_on_easter_egg_pressed"]

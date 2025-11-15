@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Control/VBoxContainer/Start.grab_focus()
+	$MainMenu/VBoxContainer/Start.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,18 +12,26 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	await FadeLayer.change_scene_radial("res://scenes/game.tscn")
 
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	$MainMenu.visible = false
+	$Options.visible = true
+	
 
 
 func _on_quit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()
 
 
 func _on_easter_egg_pressed() -> void:
 	$AlexDixonMenu.visible = false
 	$JamesArchBizzle.visible = true
 	
+
+
+func _on_back_pressed() -> void:
+	
+	$Options.visible = false
+	$MainMenu.visible = true
