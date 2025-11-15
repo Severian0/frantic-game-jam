@@ -13,6 +13,7 @@ corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
 
 [node name="CodeTask" type="Control" node_paths=PackedStringArray("editor")]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +23,7 @@ grow_vertical = 2
 theme = ExtResource("1_b7gsc")
 script = ExtResource("2_w0ixo")
 editor = NodePath("Panel/CodeEditor")
+p_impossible = null
 impossible = "#!bin/sh# scripting in bash is impossible# GIVE UP"
 
 [node name="Panel" type="Panel" parent="."]
@@ -50,19 +52,6 @@ offset_bottom = 31.999996
 grow_horizontal = 2
 text = "Fix the code!!!"
 horizontal_alignment = 1
-
-[node name="Hint" type="RichTextLabel" parent="Panel"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 57.0
-offset_top = 159.0
-offset_right = 308.0
-offset_bottom = 175.0
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 8
-text = "Remember to use tabs, not spaces!"
 
 [node name="CodeEditor" type="TextEdit" parent="Panel"]
 layout_mode = 1

@@ -1,14 +1,19 @@
 extends CharacterBody2D
+class_name Player
 
 
 @export var speed = 300.0
 @export var sprite: AnimatedSprite2D
+@export var game_manager: GameManager
 
 
 var move_direction = 1
 
 
 func _physics_process(delta: float) -> void:
+	if game_manager.is_task_open():
+		return
+	
 	var moving = false
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -26,6 +31,8 @@ func _physics_process(delta: float) -> void:
 		moving = true
 	else:
 		velocity.y = move_toward(velocity.y, 0, speed)
+		
+	velocity = velocity.normalized() * speed
 
 	if move_direction == 1:
 		if moving:

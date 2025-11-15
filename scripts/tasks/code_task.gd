@@ -1,4 +1,5 @@
 extends Node
+class_name CodeTask
 
 @export var editor: TextEdit
 @export var p_impossible = 0.01
@@ -8,7 +9,9 @@ var questions: Array[String]
 var answers: Array[String]
 var q_index = -1 # -1 means impossible
 
-func _ready() -> void:
+signal on_complete_task(strikes: int)
+
+func _init() -> void:
 	var qlen = _load_folder_texts("res://resources/tasks/code_task/questions", questions)
 	var alen = _load_folder_texts("res://resources/tasks/code_task/answers", answers)
 	if qlen != alen:
@@ -20,9 +23,11 @@ func _ready() -> void:
 		var file = FileAccess.open("res://resources/tasks/code_task/impossible.txt", FileAccess.READ)
 		var code = file.get_as_text()
 		file.close()
-		editor.text = code
 		return
 	q_index = randi_range(0, qlen - 1)
+
+
+func _ready() -> void:
 	editor.text = questions[q_index]
 
 
@@ -62,9 +67,23 @@ func _load_folder_texts(folder_path: String, out_array: Array) -> int:
 # incorrect - 1 strike
 # deleted code - 2 strikes
 func _on_button_pressed() -> void:
+	if len(editor.text.strip_edges()) == 0:
+		complete_task(2)
 	if q_index == -1:
-		print("WRONG!")
+		# Get trolled, impossible task
+		complete_task(1)
 	elif editor.text.strip_edges() == answers[q_index].strip_edges():
-		print("Correct")
+		# Correct
+		complete_task(0)
 	else:
-		print("Incorrect")
+		# Wrong
+		complete_task(1)
+
+
+func complete_task(strikes: int) -> void:
+	on_complete_task.emit(strikes)
+	queue_free()
+
+
+func _on_close_button_pressed() -> void:
+	get_parent().remove_child(self)
