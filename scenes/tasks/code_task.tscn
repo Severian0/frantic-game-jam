@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3g228omdxqxn"]
+
+[ext_resource type="Theme" uid="uid://bfyjkevfir51a" path="res://resources/theme.tres" id="1_b7gsc"]
+[ext_resource type="Script" uid="uid://bakgmppg40nkw" path="res://scripts/tasks/code_task.gd" id="2_w0ixo"]
+[ext_resource type="FontFile" uid="uid://dpykwehph2xag" path="res://fonts/jetbrainsmono.ttf" id="2_y0yhc"]
+[ext_resource type="Texture2D" uid="uid://ck2k0kfilr7y8" path="res://textures/close.png" id="4_keo0t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4r53"]
+bg_color = Color(0.56078434, 0.8156863, 0.19607843, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[node name="CodeTask" type="Control" node_paths=PackedStringArray("editor")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b7gsc")
+script = ExtResource("2_w0ixo")
+editor = NodePath("Panel/CodeEditor")
+impossible = "#!bin/sh# scripting in bash is impossible# GIVE UP"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -192.0
+offset_right = 311.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -154.5
+offset_top = 9.0
+offset_right = 154.5
+offset_bottom = 31.999996
+grow_horizontal = 2
+text = "Fix the code!!!"
+horizontal_alignment = 1
+
+[node name="CodeEditor" type="TextEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -241.5
+offset_top = 44.0
+offset_right = 251.5
+offset_bottom = 355.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_y0yhc")
+placeholder_text = "bruh"
+
+[node name="DoneButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -35.0
+offset_right = -9.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_h4r53")
+text = "Done"
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 2.0
+offset_right = 593.0
+offset_bottom = 38.0
+icon = ExtResource("4_keo0t")
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="Panel/DoneButton" to="." method="_on_button_pressed"]

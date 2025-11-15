@@ -1,0 +1,8 @@
+public class D {
+	public static void main(String[] args) {
+		String x = sayHi();
+	}
+	static String sayHi() {
+		return "Hi";
+	}
+}

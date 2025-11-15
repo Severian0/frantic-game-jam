@@ -1,0 +1,5 @@
+public class Repository­Policy­Collection­Decorator­Request­Expression­Manager­Pool­Dispatcher­Proccesor­Stub­Callback­Info­Configuration {
+	public static void main(String args) {
+		System.out.println("Hello world");
+	}
+}

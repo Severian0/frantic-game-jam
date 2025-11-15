@@ -1,0 +1,3 @@
+#!bin/sh
+# scripting in bash is impossible
+# GIVE UP

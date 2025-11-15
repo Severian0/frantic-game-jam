@@ -1,0 +1,5 @@
+public class Message­Method­Test­Worker­Tag­Facade­Map­Service­Repository­Authentication­Mapping­Reponse {
+	public static void main(String[] args) {
+		System.out.println("Hello world");
+	}
+}
